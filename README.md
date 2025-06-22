@@ -1,4 +1,4 @@
-## 简介 Ubuntu22.04 Jammy-X11
+## 简介 Ubuntu24.04 Jammy-X11
 
 A set of shell scripts that will build GNU/Linux distribution rootfs image
 for rockchip platform.
@@ -9,7 +9,7 @@ for rockchip platform.
 
 ## 安装依赖
 
-推荐使用Ubuntu20.04及以上版本主机构建根文件系统
+推荐使用Ubuntu24.04及以上版本主机构建根文件系统
 
 * ubuntu 22.04 (Jammy-X11)
 
@@ -19,7 +19,7 @@ sudo dpkg -i ubuntu-build-service/packages/*
 sudo apt-get install -f
 ```
 
-## 构建 Ubuntu22.04镜像（仅支持64bit）
+## 构建 Ubuntu24.04镜像（仅支持64bit）
 
 - lite：控制台版，无桌面
 - xfce：桌面版，使用xfce桌面套件
