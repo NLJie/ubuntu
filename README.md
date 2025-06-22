@@ -1,4 +1,4 @@
-## 简介
+## 简介 Ubuntu22.04 Jammy-X11
 
 A set of shell scripts that will build GNU/Linux distribution rootfs image
 for rockchip platform.
