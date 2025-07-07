@@ -171,7 +171,7 @@ gpasswd -a user video
 gpasswd -a user audio
 passwd root <<IEOF
 root
-root
+1
 IEOF
 
 # allow root login

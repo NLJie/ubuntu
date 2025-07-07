@@ -4,28 +4,27 @@
 [ -r /etc/lsb-release ] && . /etc/lsb-release
 
 printf "\n"
-echo "\e[1;34m 
-           OO                            OO
-           OOOO                        OOOO
-           OOOOO                     OOOOOO
-           OOOOOOO                 .OOOOOOO
-           OOOOOOOOO              OOOOOOOOO
-           OOOOOOOOOOO          OOOOOOOOOOO
-           OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
-           OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
-           OOOOO\    OOOOOOOOOOOO    /OOOOO
-           OOOOOOOOO    OOOOOO     OOOOOOOO
-           OOOOO/    OOOOOOOOOOOOO   \OOOOO
-           OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
-           OOOOOOOOOOOOOO\￣/OOOOOOOOOOOOOO
-           OOOOOOOOOOOOOOO\/OOOOOOOOOOOOOOO
-           OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO 
-  _            _                     ____        _
- | |    _   _ | |__    ____  _____  / ___| ____ | |_   
- | |   | | | || '_ \  / _  ||  _  || |    / _  || __|
- | |___| |_| || |_) || (_| || | | || |___| (_| || |_
- |_____|\__._||_.__/  \__'_||_| |_| \____|\__'_| \__| 
-\e[0m"
+# Dark OS 风格配色
+DARK_OS_CYAN='\033[38;5;87m'    # 亮青色
+DARK_OS_MAGENTA='\033[38;5;207m' # 亮品红
+DARK_OS_GREEN='\033[38;5;83m'    # 酸橙绿
+DARK_OS_YELLOW='\033[38;5;221m'  # 明黄
+DARK_OS_BLUE='\033[38;5;33m'     # 亮蓝
+DARK_OS_PURPLE='\033[38;5;99m'   # 紫罗兰
+NC='\033[0m' # 重置颜色
+
+# 渐变色标题
+echo "${DARK_OS_CYAN}"
+echo "======================================================================"
+echo "${DARK_OS_GREEN}\t ____                   _         ___    ____  "
+echo "${DARK_OS_YELLOW}\t|  _ \    __ _   _ __  | | __    / _ \  / ___| "
+echo "${DARK_OS_BLUE}\t| | | |  / _| | | '__| | |/ /   | | | | \___ \ "
+echo "${DARK_OS_PURPLE}\t| |_| | | (_| | | |    |   <    | |_| |  ___) |"
+echo "${DARK_OS_CYAN}\t|____/   \__,_| |_|    |_|\_\    \___/  |____/ "
+echo "${DARK_OS_MAGENTA}                                              "
+echo "======================================================================"
+echo "${NC}"
+
 
 if [ -z "$DISTRIB_DESCRIPTION" ] && [ -x /usr/bin/lsb_release ]; then
 	# Fall back to using the very slow lsb_release utility
