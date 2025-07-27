@@ -137,6 +137,8 @@ sudo cp -rpf overlay/* $TARGET_ROOTFS_DIR/
 
 if [ "$RK_DEFCONFIG" = "darkos_rk3568_ubuntu_lite_defconfig" ]; then
     echo "DarkOS-3568-A01" > $TARGET_ROOTFS_DIR/etc/darkos_board_id
+elif [ "$RK_DEFCONFIG" = "darkos_rk3568_r1_ubuntu_lite_defconfig" ]; then
+    echo "DarkOS-3568-B01" > $TARGET_ROOTFS_DIR/etc/darkos_board_id
 else
     echo "Normal" > $TARGET_ROOTFS_DIR/etc/darkos_board_id
 fi

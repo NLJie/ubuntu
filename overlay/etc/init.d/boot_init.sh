@@ -52,6 +52,12 @@ board_info() {
 			BOARD_DTB='rk3568-darkos-generic.dtb'
 			BOARD_uEnv='uEnvDarkOS3568A01.txt'
 			;;
+		# 1U 机箱项目板子
+		DarkOS-3568-B01)
+			BOARD_NAME='RockEnergy-3568-B01'
+			BOARD_DTB='rk3568-rockenergy-r1.dtb'
+			BOARD_uEnv='uEnvRockEnergy3568B01.txt'
+			;;
 
 		DarkOS-3576-D01)
 			BOARD_NAME='DarkOS-3576-D01'
@@ -107,8 +113,10 @@ if [ ! -e "/boot/boot_init" ]; then
 			done
 
 			Boot_Part="${Root_Part::-1}${Boot_Part_Num}"
-			mount "$Boot_Part" /boot || true
-			echo "$Boot_Part  /boot  auto  defaults  0 2" >> /etc/fstab
+			# mount "$Boot_Part" /boot || true
+			# echo "$Boot_Part  /boot  auto  defaults  0 2" >> /etc/fstab
+			mount /dev/mmcblk0p2 /boot || true
+			echo "/dev/mmcblk0p2  /boot  auto  defaults  0 2" >> /etc/fstab
 		fi
 
 		# 安装内核
